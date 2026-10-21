@@ -40,11 +40,9 @@ CREATE OR REPLACE STAGE SNOW_CLI_STAGE
 DESC STAGE SNOW_CLI_STAGE;
 
 -- snowsql -a <account_identifier> -u <username>
--- snowsql -a <SNOWFLAKE_ACCOUNT> -u <SNOWFLAKE_USER>
--- <SNOWFLAKE_PASSWORD>
 
 -- put data into stage
-PUT 'file:///E:/1 CDE/CDE Repos/snowflake-loading-data/data/customer_detail.csv'
+PUT 'file://<path_to_repo>/data/customer_detail.csv'
   @SNOW_CLI_STAGE
   AUTO_COMPRESS=TRUE;
 
